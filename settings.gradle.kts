@@ -21,3 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "NonggleResume"
 include(":app")
+include(":data")
+include(":presentation")
+include(":domain")
+include(":core")
