@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.presentation"
+    namespace = "com.example.setting"
     compileSdk {
         version = release(36)
     }
@@ -58,6 +58,5 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
-    implementation(":domain")
-    implementation(":core")
+    implementation(":presentation")
 }
