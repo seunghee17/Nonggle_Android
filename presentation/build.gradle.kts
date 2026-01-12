@@ -58,6 +58,6 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
-    implementation(":domain")
-    implementation(":core")
+    implementation(project(":domain"))
+    implementation(project(":core"))
 }

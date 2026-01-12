@@ -61,5 +61,5 @@ dependencies {
     // Navigation3
     implementation(libs.androidx.navigation3.runtime)
 
-    implementation(":presentation")
+    implementation(project(":presentation"))
 }
