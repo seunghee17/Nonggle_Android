@@ -74,6 +74,7 @@ jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrai
 
 # build-logic
 example-nonggle-android-application = {id = "example.nonggle.android.application", version = "unspecified"}
+example-nonggle-android-application-compose = {id = "example.nonggle.android.application.compose", version = "unspecified"}
 
 # ksp
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
