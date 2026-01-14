@@ -23,6 +23,10 @@ dependencyResolutionManagement {
 rootProject.name = "NonggleResume"
 include(":app")
 
+// core 모듈
+include(":core:data")
+include(":core:designsystem")
+
 include(":presentation")
 include(":presentation:home")
 include(":presentation:download")

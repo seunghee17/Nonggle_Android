@@ -23,5 +23,20 @@ gradlePlugin {
             id = "example.nonggle.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
+
+        register("androidLibrary") {
+            id = "example.nonggle.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
+
+        register("androidLibraryCompose") {
+            id = "example.nonggle.android.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
+
+        register("androidApplication") {
+            id = "example.nonggle.android.application"
+            implementationClass = "AndroidApplicationConventionPlugin"
+        }
     }
 }
