@@ -38,5 +38,10 @@ gradlePlugin {
             id = "example.nonggle.android.feature.ui"
             implementationClass = "AndroidFeatureUIConventionPlugin"
         }
+
+        register("jvmLibrary") {
+            id = "example.nonggle.module.jvm.library"
+            implementationClass = "JvmLibraryConventionPlugin"
+        }
     }
 }

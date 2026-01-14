@@ -80,6 +80,7 @@ example-nonggle-android-application-compose = {id = "example.nonggle.android.app
 example-nonggle-android-library = {id = "example.nonggle.android.library", version = "unspecified"}
 example-nonggle-android-library-compose = {id = "example.nonggle.android.library.compose", version = "unspecified"}
 example-nonggle-android-feature-ui = {id = "example.nonggle.android.feature.ui", version = "unspecified"}
+example-nonggle-module-jvm-library = {id = "example.nonggle.module.jvm.library", version = "unspecified"}
 
 # ksp
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
