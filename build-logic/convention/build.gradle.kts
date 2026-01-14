@@ -43,5 +43,9 @@ gradlePlugin {
             id = "example.nonggle.module.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
+        register("androidHilt") {
+            id = "example.nonggle.android.hilt"
+            implementationClass = "AndroidHiltConventionPlugin"
+        }
     }
 }

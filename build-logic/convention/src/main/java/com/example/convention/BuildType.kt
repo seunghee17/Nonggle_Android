@@ -43,7 +43,7 @@ internal fun Project.configureBuildTypes(
         }
     }
 }
-
+//localProperties.require("DEBUG_API_URL")
 private fun BuildType.configureDebugBuildType() {
     buildConfigField("String", "BASE_URL", "\"DEBUG_API_URL\"")
 }
