@@ -1,6 +1,4 @@
 plugins {
-//    alias(libs.plugins.ksp)
-//    alias(libs.plugins.hilt)
     alias(libs.plugins.example.nonggle.android.application.compose)
     alias(libs.plugins.example.nonggle.android.hilt)
 }
