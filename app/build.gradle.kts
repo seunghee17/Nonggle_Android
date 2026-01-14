@@ -69,8 +69,6 @@ dependencies {
     implementation(libs.androidx.navigation3.runtime)
     implementation(libs.androidx.navigation3.ui)
 
-    implementation(project(":data"))
-    implementation(project(":domain"))
     implementation(project(":presentation"))
     implementation(project(":presentation:home"))
     implementation(project(":presentation:setting"))
