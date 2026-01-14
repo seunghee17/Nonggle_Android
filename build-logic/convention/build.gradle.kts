@@ -34,9 +34,9 @@ gradlePlugin {
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
 
-        register("androidApplication") {
-            id = "example.nonggle.android.application"
-            implementationClass = "AndroidApplicationConventionPlugin"
+        register("androidFeatureUI") {
+            id = "example.nonggle.android.feature.ui"
+            implementationClass = "AndroidFeatureUIConventionPlugin"
         }
     }
 }
