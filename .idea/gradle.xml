@@ -34,10 +34,6 @@
             <option value="$PROJECT_DIR$/feature/download" />
             <option value="$PROJECT_DIR$/feature/home" />
             <option value="$PROJECT_DIR$/feature/setting" />
-            <option value="$PROJECT_DIR$/presentation" />
-            <option value="$PROJECT_DIR$/presentation/download" />
-            <option value="$PROJECT_DIR$/presentation/home" />
-            <option value="$PROJECT_DIR$/presentation/setting" />
           </set>
         </option>
       </GradleProjectSettings>
