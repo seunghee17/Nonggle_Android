@@ -1,3 +1,5 @@
+import org.gradle.internal.impldep.org.junit.experimental.categories.Categories.CategoryFilter.include
+
 plugins {
     alias(libs.plugins.example.nonggle.android.application.compose)
     alias(libs.plugins.example.nonggle.android.hilt)
@@ -35,10 +37,17 @@ dependencies {
     // hilt
     implementation(libs.hilt.android)
     implementation(libs.hilt.navigation.compose)
-    //ksp(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
 
     //Navigation3
     implementation(libs.androidx.navigation3.runtime)
     implementation(libs.androidx.navigation3.ui)
 
+
+    implementation(project(":core:designsystem"))
+    implementation(project(":core:navigation"))
+
+    implementation(project(":feature:home"))
+    implementation(project(":feature:download"))
+    implementation(project(":feature:setting"))
 }
