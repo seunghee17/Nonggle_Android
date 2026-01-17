@@ -1,7 +1,7 @@
-# .coderabbit.yaml
+# .coderabbit.yaml (repo root)
 
 # 리뷰/코멘트 언어
-language: "ko-KR" # 한국어 :contentReference[oaicite:1]{index=1}
+language: "ko-KR"
 
 # 전체 톤 가이드(최대 250자)
 tone_instructions: >
@@ -10,10 +10,9 @@ tone_instructions: >
   Android 아키텍처/성능 저하 가능성(리컴포지션, 코루틴, DI, 모듈 경계)을 우선순위로 봐줘.
 
 reviews:
-  # 리뷰 스타일 프로필
+  # 리뷰 스타일 프로필: chill
   profile: "chill"
 
-  # 상위 요약은 유지
   high_level_summary: true :contentReference[oaicite:3]{index=3}
   poem: false :contentReference[oaicite:4]{index=4}
   in_progress_fortune: false :contentReference[oaicite:5]{index=5}
@@ -27,18 +26,17 @@ reviews:
     base_branches:
       - "^develop$"
 
-    # 제목에 WIP 등이 있으면 스킵하고 싶다면 키워드 추가
+
     ignore_title_keywords:
       - "wip"
       - "draft"
 
-  # 파일 경로별 “어떻게 리뷰할지” 지시
   path_instructions:
     # Kotlin/Compose 전반
     - path: "**/*.kt"
       instructions: |
         아래 우선순위로 리뷰해줘:
-        1) 아키텍처/모듈 경계: 모듈간 의존 방향, UI/Domain/Data 분리, 순환 의존 가능성
+        1) 아키텍처/모듈 경계: feature→core 의존 방향, UI/Domain/Data 분리, public API 최소화, 순환 의존 가능성
         2) 상태/단방향 흐름: UI state 단일 소스, event/effect 분리, Flow/StateFlow 사용이 안전한지
         3) 코루틴/Flow: dispatcher 적절성, cancellation/structured concurrency, 누수(전역 스코프/무한 collect), backpressure(conflate/buffer) 사용 근거
         4) 성능: 불필요한 객체 생성, 컬렉션 변환 남발, 과한 인라인 람다, 로깅/트레이스 남용, I/O on Main
