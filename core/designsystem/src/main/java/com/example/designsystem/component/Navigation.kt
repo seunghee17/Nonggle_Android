@@ -1,5 +1,6 @@
 package com.example.designsystem.component
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -57,7 +58,7 @@ fun NonggleNavigationBar(
 fun NonggleMobileNavigationScaffold(
     navigationBarItems: @Composable RowScope.() -> Unit,
     modifier: Modifier = Modifier,
-    content: @Composable () -> Unit,
+    content: @Composable (PaddingValues) -> Unit,
 ) {
     Scaffold(
         modifier = modifier,
@@ -67,8 +68,8 @@ fun NonggleMobileNavigationScaffold(
                 navigationBarItems()
             }
         },
-    ) {
-        content()
+    ) { paddingValues ->
+        content(paddingValues)
     }
 }
 
