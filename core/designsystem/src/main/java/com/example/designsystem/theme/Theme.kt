@@ -124,12 +124,12 @@ fun NonggleTheme(
         tonalElevation = 2.dp,
     )
     val backgroundTheme = when {
-        androidTheme -> if (darkTheme) DarkDefaultColorScheme else LightDefaultColorScheme
+        androidTheme -> if (darkTheme) DarkAndroidBackgroundTheme else LightAndroidBackgroundTheme
         else -> defaultBackgroundTheme
     }
     // Composition locals
     CompositionLocalProvider(
-        LocalBackgroundTheme provides backgroundTheme as BackgroundTheme,
+        LocalBackgroundTheme provides backgroundTheme,
     ) {
         MaterialTheme(
             colorScheme = colorScheme,
