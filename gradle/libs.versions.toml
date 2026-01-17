@@ -92,7 +92,7 @@ example-nonggle-android-serialization = {id = "example.nonggle.android.serializa
 
 # ksp
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version = "kotlin"}
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin"}
 
 # hilt
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt"}

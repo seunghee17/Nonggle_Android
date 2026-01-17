@@ -3,24 +3,24 @@ package com.example.nonggleresume
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import com.example.nonggleresume.MainActivityUiState.Loading
 import com.example.nonggleresume.MainActivityUiState.Success
-import kotlinx.coroutines.flow.flowOf
-import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class MainActivityViewModel @Inject constructor() : ViewModel() {
+    private val _uiState = MutableStateFlow<MainActivityUiState>(Loading)
+    val uiState: StateFlow<MainActivityUiState> = _uiState
 
-    val uiState: StateFlow<MainActivityUiState> =
-        flowOf<MainActivityUiState>(Success)
-            .stateIn(
-                scope = viewModelScope,
-                started = SharingStarted.WhileSubscribed(5_000),
-                initialValue = Loading,
-            )
+    init {
+        viewModelScope.launch {
+            // TODO: 앱에서 초기화 작업 추후 선언하기
+            _uiState.value = Success
+        }
+    }
 }
 
 sealed interface MainActivityUiState {
