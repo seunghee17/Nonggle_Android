@@ -3,6 +3,7 @@ package com.example.nonggleresume.ui
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.navigation3.runtime.NavKey
 import com.example.data.util.NetworkMonitor
 import com.example.home.navigation.HomeNavKey
@@ -19,7 +20,7 @@ import kotlinx.coroutines.flow.stateIn
 @Composable
 fun rememberNonggleAppState(
     networkMonitor: NetworkMonitor,
-    coroutineScope: CoroutineScope,
+    coroutineScope: CoroutineScope = rememberCoroutineScope(),
 ): NonggleAppState {
     val navigationState = rememberNavigationState(HomeNavKey, TOP_LEVEL_NAV_ITEMS.keys)
 

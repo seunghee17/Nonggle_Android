@@ -8,6 +8,7 @@ class AndroidFeatureUIConventionPlugin: Plugin<Project> {
         target.run {
             pluginManager.run {
                 apply("example.nonggle.android.library.compose")
+                apply("example.nonggle.android.hilt")
             }
 
             dependencies {

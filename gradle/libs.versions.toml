@@ -18,6 +18,7 @@ nav3Core = "1.1.0-alpha01"
 androidxLifecycleViewModelNavigation3 = "1.2.0"
 desugar_jdk_libs = "2.0.4"
 androidxSavedStateCompose = "1.4.0"
+kotlinxSerializationJson = "1.6.3"
 
 # Project versions
 projectApplicationId = "com.example.nonggleresume"
@@ -48,6 +49,7 @@ androidx-compose-material3 = { group = "androidx.compose.material3", name = "mat
 androidx-savedstate-compose = { group = "androidx.savedstate", name = "savedstate-compose", version.ref = "androidxSavedStateCompose" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -76,6 +78,7 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 
 # build-logic
 example-nonggle-android-application = {id = "example.nonggle.android.application", version = "unspecified"}
@@ -85,6 +88,7 @@ example-nonggle-android-library-compose = {id = "example.nonggle.android.library
 example-nonggle-android-feature-ui = {id = "example.nonggle.android.feature.ui", version = "unspecified"}
 example-nonggle-module-jvm-library = {id = "example.nonggle.module.jvm.library", version = "unspecified"}
 example-nonggle-android-hilt = {id = "example.nonggle.android.hilt", version = "unspecified"}
+example-nonggle-android-serialization = {id = "example.nonggle.android.serialization", version = "unspecified"}
 
 # ksp
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
@@ -101,7 +105,8 @@ compose = [
     "androidx-compose-material3",
     "androidx-compose-ui",
     "androidx-compose-ui-graphics",
-    "androidx-compose-ui-tooling-preview"
+    "androidx-compose-ui-tooling-preview",
+    "androidx-compose-runtime"
 ]
 
 compose-debug = [

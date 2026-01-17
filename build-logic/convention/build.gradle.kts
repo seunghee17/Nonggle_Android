@@ -48,5 +48,9 @@ gradlePlugin {
             id = "example.nonggle.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
+        register("androidSerialization") {
+            id = "example.nonggle.android.serialization"
+            implementationClass = "AndroidSerializationConventionPlugin"
+        }
     }
 }

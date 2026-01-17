@@ -38,7 +38,7 @@ import com.example.setting.navigation.settingEntryProvider
 @Composable
 internal fun NonggleApp(
     appState: NonggleAppState,
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
 ) {
     val navigator = remember { Navigator(appState.navigationState) }
 
@@ -57,7 +57,7 @@ internal fun NonggleApp(
         }
     ) {
         Scaffold(
-            containerColor = Color.Transparent,
+            containerColor = MaterialTheme.colorScheme.background,
             contentColor = MaterialTheme.colorScheme.onBackground,
             contentWindowInsets = WindowInsets(0, 0, 0, 0),
         ) { padding ->

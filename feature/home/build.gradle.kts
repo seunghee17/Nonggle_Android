@@ -1,6 +1,6 @@
 plugins {
     alias(libs.plugins.example.nonggle.android.feature.ui)
-    alias(libs.plugins.example.nonggle.android.hilt)
+    alias(libs.plugins.example.nonggle.android.serialization)
 }
 
 android {
@@ -14,9 +14,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-// navigation3
-    implementation(libs.androidx.navigation3.runtime)
-
-    implementation(project(":core:navigation"))
 }
