@@ -3,6 +3,9 @@ package com.example.nonggleresume.navigation
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import com.example.designsystem.icon.NonggleIcons
+import com.example.download.navigation.DownLoadNavKey
+import com.example.home.navigation.HomeNavKey
+import com.example.setting.navigation.SettingNavKey
 import com.example.home.R as homeResource
 import com.example.download.R as downloadResource
 import com.example.setting.R as settingResource
@@ -33,4 +36,10 @@ val SETTING = TopLevelNavItem(
     unselectedIconRes = NonggleIcons.homeUnselected,
     iconTextId = settingResource.string.feature_name,
     titleTextId = settingResource.string.feature_name,
+)
+
+val TOP_LEVEL_NAV_ITEMS = mapOf(
+    HomeNavKey to HOME,
+    DownLoadNavKey to DOWNLOAD,
+    SettingNavKey to SETTING,
 )

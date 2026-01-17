@@ -1,4 +1,5 @@
 package com.example.designsystem.theme
+
 import android.os.Build
 import androidx.annotation.ChecksSdkIntAtLeast
 import androidx.annotation.VisibleForTesting
