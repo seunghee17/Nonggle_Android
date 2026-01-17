@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             content {
@@ -21,3 +22,14 @@ dependencyResolutionManagement {
 
 rootProject.name = "NonggleResume"
 include(":app")
+
+// core 모듈
+include(":core:data")
+include(":core:designsystem")
+include(":core:navigation")
+include(":core:domain")
+
+include(":feature:home")
+include(":feature:download")
+include(":feature:setting")
+include(":core:common")
