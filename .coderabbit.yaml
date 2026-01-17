@@ -1,0 +1,61 @@
+# ===============================
+# CodeRabbit configuration
+# ===============================
+
+# 리뷰/코멘트 언어
+language: ko-KR
+
+# 전체 톤 가이드
+tone_instructions: |
+  정확하고 담백하게 리뷰해줘.
+  불필요한 비난이나 감정적인 표현은 피하고,
+  왜 문제가 되는지와 어떻게 개선할 수 있는지를 간결하게 설명해줘.
+  Android 아키텍처와 성능 저하 가능성
+  (리컴포지션, 코루틴, DI, 모듈 경계)을 우선적으로 분석해줘.
+
+reviews:
+  # 리뷰 스타일
+  profile: chill
+
+  # 리뷰 옵션
+  high_level_summary: true
+  poem: false
+  in_progress_fortune: false
+  collapse_walkthrough: true
+
+  # 자동 리뷰 설정
+  auto_review:
+    enabled: true
+    auto_incremental_review: true
+    drafts: false
+    base_branches:
+      - "^develop$"
+    ignore_title_keywords:
+      - "wip"
+      - "draft"
+
+  # 경로별 리뷰 지침
+  path_instructions:
+    - path: "**/*.kt"
+      instructions: |
+        다음 항목을 우선적으로 리뷰해줘:
+        1) 아키텍처/모듈 경계 (feature → core 의존 방향, 순환 의존성)
+        2) 상태 관리와 단방향 데이터 흐름
+        3) Coroutine / Flow 사용의 안정성 (dispatcher, cancellation, leak)
+        4) 성능 이슈 (불필요한 recomposition, 객체 생성, 메인 스레드 I/O)
+        5) 가독성과 변경 영향 범위
+
+    - path: "**/*compose*/**/*.kt"
+      instructions: |
+        Compose 성능을 중심으로 리뷰해줘:
+        - 불필요한 recomposition 유발 요소
+        - remember / derivedStateOf / rememberUpdatedState 사용 여부
+        - Lazy 리스트 key 안정성
+        - LaunchedEffect / SideEffect 키 적절성
+
+    - path: "**/*.gradle.kts"
+      instructions: |
+        빌드 성능과 모듈화 관점에서 리뷰해줘:
+        - dependency 정렬과 중복
+        - api / implementation 선택
+        - 불필요한 transitive dependency
