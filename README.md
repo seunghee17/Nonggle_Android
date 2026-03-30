@@ -178,25 +178,6 @@ NonggleResume
 
 ## 주요 구현 상세
 
-### Navigation3 — 탭 독립 백스택
-
-탭 전환 시 각 탭의 내부 화면 스택이 독립적으로 유지됩니다.  
-홈 탭 → 상세 화면 진입 → 다른 탭 이동 → 홈 탭 복귀 시 상세 화면이 그대로 복원됩니다.
-
-```
-topLevelStack:  [Home] → [Home, Download] → [Home, Download, MyPage]
-                                              ↑ 탭 이동은 여기를 조작
-
-subStacks:
-  Home     → [HomeNavKey, ResumeViewNavKey]   ← 탭별 독립 스택
-  Download → [DownLoadNavKey]
-  MyPage   → [MyPageNavKey]
-```
-
-모든 `NavKey` 는 `@Serializable` 이므로 프로세스 사망 후에도 전체 백스택이 복원됩니다.
-
----
-
 ### PDF 변환 파이프라인
 
 외부 PDF 라이브러리 없이 Android 네이티브 `PdfDocument` 로 구현했습니다.  
