@@ -1,5 +1,5 @@
 # 농글농글
-농가 특화된 이력서를 작성하고 PDF로 저장하는 Android 앱
+농업 종사자 지원을 위한 이력서를 작성하고 PDF로 저장하는 Android 앱
 
 ## 주요 기능
 
@@ -180,7 +180,7 @@ NonggleResume
 
 ### PDF 변환 파이프라인
 
-외부 PDF 라이브러리 없이 Android 네이티브 `PdfDocument` 로 구현했습니다.  
+PDF 변환을 위해 Android 네이티브 `PdfDocument` 를 활용해 구현했습니다.  
 Compose 화면을 Bitmap 없이 Canvas에 직접 그려 해상도 손실이 없습니다.
 
 ```
